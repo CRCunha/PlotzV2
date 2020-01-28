@@ -20,6 +20,9 @@ const Home = () => {
             <div className="content">
                 <PaperGraphic/>
                 <Paper/>
+                <Paper/>
+                <Paper/>
+                <Paper/>
             </div>
             <Snackbar 
                     onLoad={handleClose()}

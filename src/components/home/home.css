@@ -8,9 +8,18 @@
 }
 
 .home .content{
-    width: 95%;
+    width: 96%;
     height: 93%;
+
+    margin-left: 2%;
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    overflow: auto;
+}
+
+::-webkit-scrollbar{
+    background-color: transparent;
 }

@@ -1,5 +1,5 @@
 .paper{
-    width: 35%;
+    width: 32%;
     height: 350px;
 
     background-color: #fff;
@@ -7,4 +7,6 @@
     border-radius: 5px;
 
     box-shadow: var(--box-shadow);
+
+    margin-bottom: 30px;
 }

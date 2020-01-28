@@ -14,16 +14,16 @@ const Table = () => {
     return(
         <div className="table">
             <div className="content">
-                <Snackbar 
-                    onLoad={handleClose()}
-                    open={open}  
-                    message="Table" 
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'right',
-                    }}
-                />
             </div>
+            <Snackbar 
+                onLoad={handleClose()}
+                open={open}  
+                message="Table" 
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'right',
+                }}
+            />
         </div>
     )
 }

@@ -1,0 +1,10 @@
+.paper{
+    width: 35%;
+    height: 350px;
+
+    background-color: #fff;
+
+    border-radius: 5px;
+
+    box-shadow: var(--box-shadow);
+}

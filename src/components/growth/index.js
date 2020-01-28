@@ -14,16 +14,16 @@ const Growth = () => {
     return(
         <div className="growth">
             <div className="content">
-                <Snackbar 
-                    onLoad={handleClose()}
-                    open={open}  
-                    message="Growth" 
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'right',
-                    }}
-                />
             </div>
+            <Snackbar 
+                onLoad={handleClose()}
+                open={open}  
+                message="Growth" 
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'right',
+                }}
+            />
         </div>
     )
 }

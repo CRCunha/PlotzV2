@@ -1,6 +1,10 @@
 import React from 'react'
 import './home.css'
 
+import PaperGraphic from '../paperGraphic/'
+import Paper from '../paper/'
+
+
 import Snackbar from '@material-ui/core/Snackbar';
 
 const Home = () => {
@@ -14,7 +18,10 @@ const Home = () => {
     return(
         <div className="home">
             <div className="content">
-                <Snackbar 
+                <PaperGraphic/>
+                <Paper/>
+            </div>
+            <Snackbar 
                     onLoad={handleClose()}
                     open={open} 
                     message="Home" 
@@ -23,7 +30,6 @@ const Home = () => {
                         horizontal: 'right',
                     }}
                 />
-            </div>
         </div>
     )
 }

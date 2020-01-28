@@ -3,7 +3,7 @@ import "./paper.css"
 
 const Paper = () => {
     return(
-        <div className="paper"></div>
+        <div className="paper">Anny</div>
     )
 }
 

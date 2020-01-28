@@ -3,7 +3,7 @@ import "./paperGraphic.css"
 
 const PaperGraphic = () => {
     return(
-        <div className="paperGraphic"></div>
+        <div className="paperGraphic">Chart</div>
     )
 }
 

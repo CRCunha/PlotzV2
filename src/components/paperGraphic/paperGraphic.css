@@ -13,3 +13,9 @@
     justify-content: center;
     align-items: center;
 }
+
+.paperGraphic .chart{
+    margin-top: 25px;
+    
+    font-size: 10pt;
+}

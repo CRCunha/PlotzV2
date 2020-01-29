@@ -10,7 +10,7 @@ const data = [
     {name: '', uv: 300, pv: 600, amt: 700}
 ];
 
-const PaperGraphic = () => {
+const ChartStackedArea = () => {
     return(
         <div className="paperGraphic">
             <AreaChart
@@ -30,4 +30,4 @@ const PaperGraphic = () => {
     )
 }
 
-export default PaperGraphic;
+export default ChartStackedArea;

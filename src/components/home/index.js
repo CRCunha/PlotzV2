@@ -1,8 +1,8 @@
 import React from 'react'
 import './home.css'
 
-import PaperGraphic from '../paperGraphic/'
 import Paper from '../paper/'
+import ChartStackedArea from '../chartStackedArea/'
 import ChartFillByValue from '../chartFillByValue/'
 
 
@@ -19,7 +19,7 @@ const Home = () => {
     return(
         <div className="home">
             <div className="content">
-                <PaperGraphic/>
+                <ChartStackedArea/>
                 <ChartFillByValue/>
                 <Paper/>
                 <Paper/>

@@ -4,6 +4,7 @@ import './home.css'
 import Paper from '../paper/'
 import ChartStackedArea from '../chartStackedArea/'
 import ChartFillByValue from '../chartFillByValue/'
+import ChartSimpleBar from '../chartSimpleBar/'
 
 
 import Snackbar from '@material-ui/core/Snackbar';
@@ -21,7 +22,7 @@ const Home = () => {
             <div className="content">
                 <ChartStackedArea/>
                 <ChartFillByValue/>
-                <Paper/>
+                <ChartSimpleBar/>
                 <Paper/>
                 <Paper/>
             </div>

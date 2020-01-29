@@ -3,6 +3,7 @@ import './home.css'
 
 import PaperGraphic from '../paperGraphic/'
 import Paper from '../paper/'
+import ChartFillByValue from '../chartFillByValue/'
 
 
 import Snackbar from '@material-ui/core/Snackbar';
@@ -19,7 +20,7 @@ const Home = () => {
         <div className="home">
             <div className="content">
                 <PaperGraphic/>
-                <Paper/>
+                <ChartFillByValue/>
                 <Paper/>
                 <Paper/>
                 <Paper/>

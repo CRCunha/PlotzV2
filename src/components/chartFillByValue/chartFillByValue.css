@@ -1,5 +1,5 @@
-.paperGraphic{
-    width: 66%;
+.paper{
+    width: 32%;
     height: 350px;
 
     background-color: #fff;
@@ -8,14 +8,16 @@
 
     box-shadow: var(--box-shadow);
 
+    margin-bottom: 25px;
+
     color: #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.paperGraphic .chart{
+.paper .chart{
     margin-top: 25px;
-    margin-left: -30px;
     font-size: 10pt;
+    margin-left: -20px;
 }

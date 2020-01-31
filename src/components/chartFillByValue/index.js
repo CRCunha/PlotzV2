@@ -44,6 +44,22 @@ const ChartFillByValue = () => {
     
     const off = gradientOffset();
 
+    let listColors = [
+        '#8884d8',
+        '#82ca9d',
+        '#FFD51D', 
+        '#FF6500', 
+        '#F26F80', 
+        '#E00031',
+        '#DB009A',
+        '#C4D7E2',
+        '#70008A',
+        '#5CB300',
+        '#17298C', 
+        '#049BC9',
+        '#03BF8A'
+    ]
+
     return(
         <div className="paper">
             <AreaChart 
@@ -58,8 +74,8 @@ const ChartFillByValue = () => {
                 <Tooltip />
                 <defs>
                     <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset={off} stopColor="#82ca9d" stopOpacity={1} />
-                        <stop offset={off} stopColor="#8884d8" stopOpacity={1} />
+                        <stop offset={off} stopColor={listColors[0]} stopOpacity={1} />
+                        <stop offset={off} stopColor={listColors[1]} stopOpacity={1} />
                     </linearGradient>
                 </defs>
                 <Area type="monotone" dataKey="uv" stroke="#ccc" fill="url(#splitColor)" />

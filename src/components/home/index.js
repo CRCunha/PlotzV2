@@ -5,7 +5,7 @@ import ChartStackedArea from '../chartStackedArea/'
 import ChartFillByValue from '../chartFillByValue/'
 import ChartSimpleBar from '../chartSimpleBar/'
 import ChartComposed from '../chartComposed/'
-import ChartScatter from '../chartScatter/'
+import ChartShapePie from '../chartShapePie/'
 
 import Snackbar from '@material-ui/core/Snackbar';
 
@@ -24,7 +24,7 @@ const Home = () => {
                 <ChartFillByValue/>
                 <ChartSimpleBar/>
                 <ChartComposed/>
-                <ChartScatter/>
+                <ChartShapePie/>
             </div>
             <Snackbar 
                     onLoad={handleClose()}

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./chartSimpleBar.css"
-import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,} from 'recharts';
+import {ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,} from 'recharts';
 
 
 const ChartSimpleBar = () => {
@@ -46,19 +46,22 @@ const ChartSimpleBar = () => {
 
     return(
         <div className="paper">
-            <BarChart 
-                className="chart"
-                width={360}
-                height={320}
-                data={data}
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="pv" fill="#8884d8" />
-                <Bar dataKey="uv" fill="#82ca9d" />
-            </BarChart>
+            <ResponsiveContainer>
+                <BarChart 
+                    className="chart"
+                    data={data}
+                    margin={{
+                        top: 5, right: 20, bottom: 25, left: 25,
+                    }}
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Bar dataKey="pv" fill="#8884d8" />
+                    <Bar dataKey="uv" fill="#82ca9d" />
+                </BarChart>
+            </ResponsiveContainer>
         </div>
     )
 }

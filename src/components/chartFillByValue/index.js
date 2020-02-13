@@ -1,6 +1,6 @@
 import React from 'react'
 import "./chartFillByValue.css"
-import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,} from 'recharts';
+import {ResponsiveContainer ,AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,} from 'recharts';
 
 
 const ChartFillByValue = () => {
@@ -62,24 +62,27 @@ const ChartFillByValue = () => {
 
     return(
         <div className="paper">
-            <AreaChart 
-                className="chart"
-                width={360}
-                height={320}
-                data={data}
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <defs>
-                    <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset={off} stopColor={listColors[0]} stopOpacity={1} />
-                        <stop offset={off} stopColor={listColors[1]} stopOpacity={1} />
-                    </linearGradient>
-                </defs>
-                <Area type="monotone" dataKey="uv" stroke="#ccc" fill="url(#splitColor)" />
-            </AreaChart>
+            <ResponsiveContainer>
+                <AreaChart 
+                    className="chart"
+                    margin={{
+                        top: 5, right: 20, bottom: 25, left: 25,
+                    }}
+                    data={data}
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <defs>
+                        <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset={off} stopColor={listColors[0]} stopOpacity={1} />
+                            <stop offset={off} stopColor={listColors[1]} stopOpacity={1} />
+                        </linearGradient>
+                    </defs>
+                    <Area type="monotone" dataKey="uv" stroke="#ccc" fill="url(#splitColor)" />
+                </AreaChart>
+            </ResponsiveContainer>
         </div>
     )
 }

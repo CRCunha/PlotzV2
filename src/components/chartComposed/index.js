@@ -1,6 +1,6 @@
 import React from 'react'
 import "./chartComposed.css"
-import {ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
+import { ResponsiveContainer, ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 
 
 const ChartComposed = () => {
@@ -31,20 +31,23 @@ const ChartComposed = () => {
 
     return(
         <div className="paper">
-            <ComposedChart
-                className="chart"
-                width={360}
-                height={320}
-                data={data}
-            >
-                <CartesianGrid stroke="#f5f5f5" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Area type="monotone" dataKey="amt" fill="#82ca9d" stroke="#212748" />
-                <Bar dataKey="pv" barSize={20} fill="#8884d8" />
-                <Line type="monotone" dataKey="uv" stroke="#ff7300" />
-            </ComposedChart>
+            <ResponsiveContainer>
+                <ComposedChart
+                    className="chart"
+                    data={data}
+                    margin={{
+                        top: 5, right: 20, bottom: 25, left: 25,
+                    }}
+                >
+                    <CartesianGrid stroke="#f5f5f5" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Area type="monotone" dataKey="amt" fill="#82ca9d" stroke="#212748" />
+                    <Bar dataKey="pv" barSize={20} fill="#8884d8" />
+                    <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+                </ComposedChart>
+            </ResponsiveContainer>
         </div>
     )
 }

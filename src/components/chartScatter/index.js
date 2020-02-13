@@ -1,6 +1,6 @@
 import React from 'react'
 import "./chartScatter.css"
-import {ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
+import {ResponsiveContainer ,ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 
 
 const ChartScatter = () => {
@@ -31,17 +31,20 @@ const ChartScatter = () => {
 
     return(
         <div className="paper">
-            <ScatterChart
-                className="chart"
-                width={360}
-                height={320}
-            >
-                <CartesianGrid />
-                <XAxis type="number" dataKey="x" name="stature" unit="" />
-                <YAxis type="number" dataKey="y" name="weight" unit="" />
-                <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-                <Scatter name="A school" data={data} fill="#8884d8" />
-            </ScatterChart>
+            <ResponsiveContainer>
+                <ScatterChart
+                    className="chart"
+                    margin={{
+                        top: 5, right: 20, bottom: 25, left: 25,
+                    }}
+                >
+                    <CartesianGrid />
+                    <XAxis type="number" dataKey="x" name="stature" unit="" />
+                    <YAxis type="number" dataKey="y" name="weight" unit="" />
+                    <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+                    <Scatter name="A school" data={data} fill="#8884d8" />
+                </ScatterChart>
+            </ResponsiveContainer>
         </div>
     )
 }

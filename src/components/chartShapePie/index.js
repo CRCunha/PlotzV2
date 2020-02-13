@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { PieChart, Pie, Sector } from 'recharts';
+import { ResponsiveContainer ,PieChart, Pie, Sector } from 'recharts';
 import './chartShapePie.css'
 
 const data = [
@@ -44,11 +44,11 @@ const renderActiveShape = (props) => {
             endAngle={endAngle}
             innerRadius={outerRadius + 6}
             outerRadius={outerRadius + 10}
-            fill={fill}
+            fill="#82ca9d"
         />
         <path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} stroke={fill} fill="none" />
         <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
-        <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fill="#82ca9d">{`PV ${payload.value}`}</text>    
+        <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fill={fill}>{`PV ${payload.value}`}</text>    
         {/* <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} dy={18} textAnchor={textAnchor} fill="#82ca9d">
             {`(Rate ${(percent * 100).toFixed(2)}%)`}
         </text> */}
@@ -72,21 +72,27 @@ const renderActiveShape = (props) => {
     render() {
     return (
         <div className="paper">
-            <PieChart width={360} height={320} className="chartPie">
-                <Pie
-                    className="pie"
-                    activeIndex={this.state.activeIndex}
-                    activeShape={renderActiveShape}
-                    data={data}
-                    cx={180}
-                    cy={155}
-                    innerRadius={60}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    dataKey="value"
-                    onMouseEnter={this.onPieEnter}
-                />
-            </PieChart>
+            <ResponsiveContainer>
+                <PieChart 
+                    margin={{
+                        top: 14, right: 5, bottom: 5, left: 14,
+                    }}
+                    className="chartPie">
+                    <Pie
+                        className="pie"
+                        activeIndex={this.state.activeIndex}
+                        activeShape={renderActiveShape}
+                        data={data}
+                        cx={180}
+                        cy={155}
+                        innerRadius={60}
+                        outerRadius={80}
+                        fill="#8884d8"
+                        dataKey="value"
+                        onMouseEnter={this.onPieEnter}
+                    />
+                </PieChart>
+            </ResponsiveContainer>
         </div>
     );
     }

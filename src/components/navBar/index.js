@@ -5,6 +5,8 @@ import Logo from '../../assets/img/PlotzBranco.png'
 import Home from '../../assets/img/home.svg'
 import Growth from '../../assets/img/growth.svg'
 import Table from '../../assets/img/table.svg'
+import Tooltip from '@material-ui/core/Tooltip';
+import Zoom from '@material-ui/core/Zoom';
 
 import { Link } from 'react-router-dom'
 
@@ -15,15 +17,21 @@ const NavBar = () => (
         </Link>
         <div className="menu">
             <Link className="menuIten" to="/">
-                <img src={Home} alt="home"/>
+                <Tooltip title="Home Page" placement="right" TransitionComponent={Zoom}>
+                    <img src={Home} alt="home"/>
+                </Tooltip>
             </Link>
 
             <Link className="menuIten" to="/growth">
-                <img src={Growth} alt="growth"/>
+                <Tooltip title="Growth Page" placement="right" TransitionComponent={Zoom}>
+                    <img src={Growth} alt="growth"/>
+                </Tooltip>
             </Link>
 
             <Link className="menuIten" to="/table">
-                <img src={Table} alt="table"/>
+                <Tooltip title="Table Page" placement="right" TransitionComponent={Zoom}>
+                    <img src={Table} alt="table"/>
+                </Tooltip>
             </Link>
         </div>
     </nav>

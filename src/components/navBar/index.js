@@ -5,8 +5,9 @@ import Logo from '../../assets/img/PlotzBranco.png'
 import Home from '../../assets/img/home.svg'
 import Growth from '../../assets/img/growth.svg'
 import Table from '../../assets/img/table.svg'
-import Tooltip from '@material-ui/core/Tooltip';
-import Zoom from '@material-ui/core/Zoom';
+import User from '../../assets/img/user.svg'
+import Tooltip from '@material-ui/core/Tooltip'
+import Zoom from '@material-ui/core/Zoom'
 
 import { Link } from 'react-router-dom'
 
@@ -31,6 +32,12 @@ const NavBar = () => (
             <Link className="menuIten" to="/table">
                 <Tooltip title="Table Page" placement="right" TransitionComponent={Zoom}>
                     <img src={Table} alt="table"/>
+                </Tooltip>
+            </Link>
+
+            <Link className="menuIten" to="/perfil">
+                <Tooltip title="Perfil Page" placement="right" TransitionComponent={Zoom}>
+                    <img src={User} alt="user"/>
                 </Tooltip>
             </Link>
         </div>

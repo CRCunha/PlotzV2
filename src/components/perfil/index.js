@@ -13,6 +13,9 @@ const Perfil = () => {
 
     return (
         <div className="perfil">
+            <div className="container">
+                
+            </div>
             <Snackbar 
                 onLoad={handleClose()}
                 open={open}  

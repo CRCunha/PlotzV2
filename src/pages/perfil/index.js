@@ -2,6 +2,7 @@ import React from "react";
 import "./perfil.css";
 
 import Snackbar from "@material-ui/core/Snackbar";
+import CircularProgres from "../../components/circularProgres";
 
 const Perfil = () => {
   const [open, setOpen] = React.useState(true);
@@ -13,7 +14,9 @@ const Perfil = () => {
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <div className="perfil">
-      <div className="container" />
+      <div className="container">
+        <CircularProgres/>
+      </div>
       <Snackbar
         onLoad={handleClose()}
         open={open}

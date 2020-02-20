@@ -2,6 +2,7 @@ import React from "react";
 import "./table.css";
 
 import Snackbar from "@material-ui/core/Snackbar";
+import CircularProgres from "../../components/circularProgres";
 
 const Table = () => {
   const [open, setOpen] = React.useState(true);
@@ -13,7 +14,9 @@ const Table = () => {
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <div className="table">
-      <div className="content" />
+      <div className="content">
+        <CircularProgres/>
+      </div>
       <Snackbar
         onLoad={handleClose()}
         open={open}

@@ -2,11 +2,11 @@ import React from "react";
 import "./home.css";
 
 import Snackbar from "@material-ui/core/Snackbar";
-import ChartStackedArea from "../chartStackedArea";
-import ChartFillByValue from "../chartFillByValue";
-import ChartSimpleBar from "../chartSimpleBar";
-import ChartComposed from "../chartComposed";
-import ChartScatter from "../chartScatter";
+import ChartStackedArea from "../../components/chartStackedArea";
+import ChartFillByValue from "../../components/chartFillByValue";
+import ChartSimpleBar from "../../components/chartSimpleBar";
+import ChartComposed from "../../components/chartComposed";
+import ChartScatter from "../../components/chartScatter";
 
 
 const Home = () => {

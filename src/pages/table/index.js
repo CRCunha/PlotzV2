@@ -14,7 +14,6 @@ const Table = () => {
     // eslint-disable-next-line react/jsx-filename-extension
     <div className="table">
       <div className="content" />
-      <p>pudim</p>
       <Snackbar
         onLoad={handleClose()}
         open={open}

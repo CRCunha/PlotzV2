@@ -2,6 +2,7 @@ import React from "react";
 import "./growth.css";
 
 import Snackbar from "@material-ui/core/Snackbar";
+import CircularProgres from "../../components/circularProgres";
 
 const Growth = () => {
   const [open, setOpen] = React.useState(true);
@@ -13,7 +14,9 @@ const Growth = () => {
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <div className="growth">
-      <div className="content" />
+      <div className="content">
+        <CircularProgres/>
+      </div>
       <Snackbar
         onLoad={handleClose()}
         open={open}
